@@ -1,0 +1,103 @@
+:root {
+  color-scheme: light;
+  background: #dff4fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  background: #dff4fb;
+}
+
+.presentation {
+  height: 100svh;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+}
+
+.presentation::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  display: flex;
+  min-height: 100svh;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.slide > img {
+  display: block;
+  width: 100%;
+  max-height: 100svh;
+  object-fit: contain;
+}
+
+.contact-card {
+  position: relative;
+  width: min(100vw, 56.25svh);
+  height: min(100svh, 177.778vw);
+}
+
+.contact-card > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.contact-link {
+  position: absolute;
+  left: 19%;
+  width: 64%;
+  border-radius: 1.5rem;
+  transition: background-color 160ms ease;
+}
+
+.contact-link:hover {
+  background-color: rgb(255 255 255 / 12%);
+}
+
+.contact-link:focus-visible {
+  outline: 0.25rem solid #0369a1;
+  outline-offset: 0.25rem;
+}
+
+.email-link {
+  top: 4%;
+  height: 34%;
+}
+
+.tiktok-link {
+  top: 37%;
+  height: 9%;
+}
+
+.facebook-link {
+  top: 46%;
+  height: 9%;
+}
+
+.instagram-link {
+  top: 55%;
+  height: 10%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-link {
+    transition: none;
+  }
+}
